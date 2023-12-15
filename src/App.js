@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 import { connect } from "react-redux";
 
 import {
@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import axios from 'axios';
 import { useEffect } from 'react';
+import Home from './component/Home';
 function App(props) {
   //state redux
   const dispatch = useDispatch();
@@ -29,18 +30,19 @@ function App(props) {
     fetchAllData();
   }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello world with React and Hoi Dan IT!</h1>
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //     <h1>Hello world with React and Hoi Dan IT!</h1>
 
-        <div>Count: {newCount}</div>
+    //     <div>Count: {newCount}</div>
 
-        <button onClick={() => handleIncrease()}>Increase Count</button>
+    //     <button onClick={() => handleIncrease()}>Increase Count</button>
 
-        <button onClick={() => dispatch(decreaseCounter())}>Decrease Count</button>
-      </header>
-    </div>
+    //     <button onClick={() => dispatch(decreaseCounter())}>Decrease Count</button>
+    //   </header>
+    // </div>
+    <Home />
   );
 }
 //map state redux store to prop react
