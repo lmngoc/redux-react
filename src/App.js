@@ -27,7 +27,7 @@ function App(props) {
 
   }
   useEffect(() => {
-    fetchAllData();
+    // fetchAllData();
   }, []);
   return (
     // <div className="App">
